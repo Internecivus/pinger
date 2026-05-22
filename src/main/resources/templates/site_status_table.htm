@@ -1,0 +1,31 @@
+<table>
+    <tr>
+        <th>${labels("Site.tag")}</th>
+        <th>${labels("SiteLink.type")}</th>
+        <th>${labels("SiteLink.url")}</th>
+        <th>${labels("SiteLink.status")}</th>
+        <th>${labels("SiteLink.sResponseTime")}</th>
+    </tr>
+
+    <#list sites as site>
+        <#list site.getAllLinks()! as siteLink>
+            <tr>
+                <td>${site.tag}</td>
+                <td>${siteLink.type}</td>
+                <td><a href="${siteLink.url}">${siteLink.url}</a></td>
+                <td class="text-center <#if siteLink.status == "DOWN"> alert-text </#if>">${siteLink.status}</td>
+                <td>${(siteLink.sResponseTime)!}</td>
+            </tr>
+        </#list>
+    </#list>
+</table>
+
+<style>
+    table tr td {
+        padding: 5px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>

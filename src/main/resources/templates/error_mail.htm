@@ -1,0 +1,20 @@
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h3 class="<#if (results.getAllDownLinks()?size > 0)> alert-text <#else> success-text </#if>">
+        ${labels("error.body")}
+    </h3>
+
+    <p>${exception}</p>
+</body>
+
+<style>
+    .alert-text {
+        color: red;
+    }
+</style>
+
+</html>

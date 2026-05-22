@@ -1,0 +1,27 @@
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h3 class="<#if (results.getAllDownLinks()?size > 0)> alert-text <#else> success-text </#if>">
+        ${labels("site_status.results_summary", results.getAllOnlineLinks()?size, results.getAllLinks()?size)}
+    </h3>
+    <p>${labels("SiteStatusResults.timestamp")}: ${results.getTimestamp()?datetime?iso_local}</p>
+
+    <h4>${labels("site_status.results_header")}</h4>
+
+    ${results.convertToHtmlTable()}
+</body>
+
+<style>
+    .alert-text {
+        color: red;
+    }
+
+    .success-text {
+        color: green;
+    }
+</style>
+
+</html>
