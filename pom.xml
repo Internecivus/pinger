@@ -11,7 +11,7 @@
     <properties>
         <version.java>1.8</version.java>
         <version.javax.mail>1.5.5</version.javax.mail>
-        <version.freemarker>2.3.29</version.freemarker>
+        <version.freemarker>2.3.35</version.freemarker>
         <version.slf4j-log4j12>2.0.0-alpha0</version.slf4j-log4j12>
         <version.maven.compiler.plugin>3.8.1</version.maven.compiler.plugin>
         <version.maven.resource.plugin>3.1.0</version.maven.resource.plugin>
